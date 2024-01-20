@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     TextView textView;
+    int num=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
         textView=(TextView) findViewById(R.id.textView);
     }
     public void updateText(View v){
-        textView.setText("Button clicked!");
+        num++;
+        if (num%7!=0) textView.setText("This is a click number:"+num);
+        else textView.setText("Boom!");
     }
 }
